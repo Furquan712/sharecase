@@ -10,7 +10,7 @@ const BANNER_DATA = {
     'We helps brands & agencies manage top-performing influencer programs: talent discovery & qualification, relationship management, automated campaign reporting, performance measurement and competitive benchmarking.',
   button: {
     link: '#',
-    label: 'Get Token',
+    label: 'LogIn/SignUp',
   },
   videoBtn: {
     link: '#',
@@ -36,6 +36,7 @@ const Banner = () => {
             <Link href={button.link} sx={styles.btn}>
               {button.label}
             </Link>
+            
 
             <>
               <ModalVideo

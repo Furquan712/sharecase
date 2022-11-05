@@ -4,6 +4,7 @@ import { jsx, Container, Flex } from 'theme-ui';
 import { Link as ScrollLink } from 'react-scroll';
 // import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
+import { Button } from 'theme-ui';
 import MobileDrawer from './mobileDrawer';
 import MENU_DATA from './header.data';
 // import logoDark from 'assets/logo.svg';
@@ -14,6 +15,8 @@ export default function Header({ className }) {
       <header sx={styles.header} className={className}>
         <Container sx={styles.container}>
           {/* <Logo image={logoDark} /> */}
+          {/* <Button mr={2}>LogIn</Button>
+          <Button mr={2}>SignUp</Button> */}
 
           <Flex as="nav" sx={styles.nav}>
             {MENU_DATA.map(({ path, label }, i) => (
@@ -31,6 +34,7 @@ export default function Header({ className }) {
               </ScrollLink>
             ))}
           </Flex>
+
           <MobileDrawer />
         </Container>
       </header>
@@ -55,6 +59,19 @@ const styles = {
       color: 'text',
       py: '15px',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
+    },
+  },
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'text',
+      }
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
     },
   },
   container: {
